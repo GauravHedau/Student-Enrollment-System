@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>Student Form</title>
+  </head>
+
+  <body class="bg-color">
+    <section class="container mt-5">
+      <div class="row justify-content-md-center">
+        <form
+          onsubmit="return false;"
+          class="col-md-6 col-sm-12 bg-white p-5 rounded shadow"
+        >
+          <div class="col-12 text-center">
+            <h3 class="mb-5">
+              <strong><i class="fa-solid fa-user"></i>Student form</strong>
+            </h3>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="roll" class="col-sm-3 col-form-label"
+              >Roll No:</label
+            >
+            <div class="col-sm-9">
+              <input
+                name="roll"
+                type="number"
+                class="form-control"
+                id="roll"
+                placeholder="Enter Roll No :"
+                onchange="findRoll(this)"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="name" class="col-sm-3 col-form-label"
+              >Full Name:</label
+            >
+            <div class="col-sm-9">
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                placeholder="Enter Full Name :"
+                id="name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="cls" class="col-sm-3 col-form-label">Class:</label>
+            <div class="col-sm-9">
+              <input
+                name="class"
+                type="number"
+                class="form-control"
+                placeholder="Enter Class No"
+                id="cls"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="dob" class="col-sm-3 col-form-label"
+              >Birth Date:</label
+            >
+            <div class="col-sm-9">
+              <input
+                name="dob"
+                type="date"
+                class="form-control"
+                id="dob"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="addr" class="col-sm-3 col-form-label">Address:</label>
+            <div class="col-sm-9">
+              <input
+                name="addr"
+                type="text"
+                class="form-control"
+                placeholder="Enter Current Address"
+                id="addr"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group row m-2">
+            <label for="doe" class="col-sm-3 col-form-label"
+              >Enroll Date:</label
+            >
+            <div class="col-sm-9">
+              <input
+                name="doe"
+                type="date"
+                class="form-control"
+                id="doe"
+                required
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div class="d-flex justify-content-around mb-3">
+            <button
+              type="button"
+              onclick="saveData()"
+              id="save"
+              class="btn btn-success btn-rounded"
+            >
+              <i class="fa-solid fa-paper-plane"></i>Save
+            </button>
+            <button
+              type="button"
+              onclick="updateData()"
+              id="update"
+              class="btn btn-secondary btn-rounded"
+            >
+              <i class="fa-solid fa-wrench"></i>Update
+            </button>
+            <button
+              type="button"
+              onclick="disableAll()"
+              id="reset"
+              class="btn btn-danger btn-rounded"
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./Js/index.js"></script>
+  </body>
+</html>
